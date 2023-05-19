@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-var color = "black";
+var color = "#9333ea";
 //shopping list
 var emojiDictionary = {
   "😊": "smilling",
   "🤣": "laughing",
   "😎": "smart",
   "😔": "sad",
+  "😀": "Grinning Face",
+  "😍": "Smiling Face With Heart-Eyes",
+  "😒": "Unamused face",
+  "🤩": "Star-Stuck",
+  "😘": "Face blowing a kiss",
+  "😛": "Face with  tongue",
+  "🤪": "Zany Face",
+  "😈": "Smiling Face with Horns",
   "❤️": "love",
   "💔": "broken-heart"
 };
@@ -34,11 +42,11 @@ export default function App() {
   return (
     //input/view
     <div className="App">
-      <h1>
-        <span style={{ color: color }}>inside outt!</span>
+      <h1> Emoji
+        <span style={{ color: color }}> interpreter!</span>
       </h1>
 
-      <input onChange={emojiInputHandler}></input>
+      <input style={{ width: "25%" }} onChange={emojiInputHandler}></input>
 
       <h2> {meaning}</h2>
 
@@ -46,7 +54,7 @@ export default function App() {
       {emojiWeKnow.map((emoji) => {
         return (
           <span
-            key={emoji}
+            key={emoji}           
             onClick={() => emojiClickHandler(emoji)}
             style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
           >
