@@ -1,2 +1,3 @@
 # EmojiInterpreter_App
-Created with CodeSandbox
+## It tells the emoji name by using reactJS
+### Please check the available emojis we have
